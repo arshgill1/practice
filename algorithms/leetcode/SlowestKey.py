@@ -12,7 +12,6 @@
 
 #Return the key of the keypress that had the longest duration. If there are multiple such keypresses, return the lexicographically largest key of the keypresses.
 
-
 def slowest_key(keyTimes):
     end_time=0
     char_with_longest_interval=None
