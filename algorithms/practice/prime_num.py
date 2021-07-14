@@ -34,3 +34,17 @@ while n>99 and n<201:
     else:
         print(n," prime")
     break
+
+    # a program to print all prime numbers between 100 and 200
+
+def prime_num():
+    for i in range(100,200):
+        for j in range(2,i):
+            if i%j==0:
+                break
+        else:
+            print(i)
+
+
+prime_num()
+    
