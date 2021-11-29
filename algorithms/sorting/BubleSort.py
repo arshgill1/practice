@@ -1,3 +1,10 @@
+"""
+iterate and swap through the list
+after every iteration you get one number(largest) sorted at the end
+keep iterating until the whole list is sorted or the condition for i is met
+
+"""
+
 def bubble_sort(n):
     for i in range(len(l) - 1, 0, -1):
         for j in range(i):
