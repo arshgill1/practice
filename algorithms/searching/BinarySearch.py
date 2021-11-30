@@ -1,3 +1,13 @@
+"""
+sort the array
+successor=next smallest element
+predecessor= next largest element
+while left<right:
+    find mid(left+right)//2
+compare the value smaller or larger
+update middle based on comparison if val is smaller or larger
+"""
+
 pos = -1
 
 def binary(list,n):
