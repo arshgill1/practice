@@ -1,0 +1,26 @@
+class Solution:
+    def sortedSquares(self, nums: List[int]) -> List[int]:
+        if not nums or len(nums) == 0:
+            return []
+        
+        ans = [0] * len(nums)   #create array with same size
+        right = len(nums)-1
+        left = 0
+        insertLoc = right       #same as right 
+        
+        while left <= right:
+            lsq = nums[left] * nums[left]
+            rsq = nums[right] * nums[right]
+            
+            if lsq <= rsq:
+                ans[insertLoc] = rsq
+                right -= 1
+                insertLoc -= 1
+            else:
+                ans[insertLoc] = lsq
+                left += 1
+                insertLoc -= 1
+        return ans
+        
+        
+        
