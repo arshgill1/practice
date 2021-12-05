@@ -1,0 +1,27 @@
+class Solution:
+    """
+    find the mid value
+    check if mid is equal to the target
+    return position of target
+    if not: 
+        update left or right position based on if target is smaller or bigger
+        find new mid and repeat until the target is reached
+    Otherwise:
+            return -1
+            
+            
+            [-1,0,3,5,9,12]
+    """
+    def search(self, nums: List[int], target: int) -> int:
+        right = len(nums)-1 
+        left = 0 
+        index = -1
+        while left <= right:
+            mid = (right + left) // 2
+            if target == nums[mid]: 
+                return mid 
+            if target < nums[mid]:
+                right = mid - 1
+            else:
+                left = mid + 1 
+        return -1 
